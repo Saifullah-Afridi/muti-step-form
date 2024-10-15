@@ -6,6 +6,8 @@ import Step2 from "./components/Step2";
 import Step3 from "./components/Step3";
 import Home from "./components/Home";
 import MultiStepForm from "./components/MultiStepForm";
+import Accordian from "./components/Accordian";
+import Accordians from "./components/Accordians";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       {/* <ProgressBar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/accordian" element={<Accordian />} />
+        <Route path="/accordians" element={<Accordians />} />
         {/* <Route index element={<Step2 />} /> */}
         {/* <Route path="/step1" element={<Step1 />} />
         <Route path="/step2" element={<Step2 />} />
