@@ -8,6 +8,8 @@ import Home from "./components/Home";
 import MultiStepForm from "./components/MultiStepForm";
 import Accordian from "./components/Accordian";
 import Accordians from "./components/Accordians";
+import NavigationBar from "./components/NavigationBar";
+import ModelWindow from "./components/ModelWindow";
 
 const App = () => {
   return (
@@ -15,8 +17,9 @@ const App = () => {
       {/* <ProgressBar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/navigation-bar" element={<NavigationBar />} />
         <Route path="/accordian" element={<Accordian />} />
-        <Route path="/accordians" element={<Accordians />} />
+        <Route path="/model" element={<ModelWindow />} />
         {/* <Route index element={<Step2 />} /> */}
         {/* <Route path="/step1" element={<Step1 />} />
         <Route path="/step2" element={<Step2 />} />
