@@ -24,7 +24,7 @@ const ModelWindow = () => {
         </button>
       </div>
       {open && (
-        <div className="min-h-screen w-full top-0 left-0  fixed bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 bg-opacity-60 flex flex-col justify-center items-center ">
+        <div className="min-h-screen w-full top-0 left-0  fixed flex flex-col justify-center items-center bg-gray-800 bg-opacity-50 ">
           <div className="bg-slate-200 py-7 px-28 shadow-lg">
             <h3 className="text-lg my-2 ">Are You Sure, To Buy!</h3>
             <div className="flex gap-7">
