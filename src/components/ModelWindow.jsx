@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { type } from "./../../node_modules/arg/index.d";
 
 const ModelWindow = () => {
@@ -12,12 +12,23 @@ const ModelWindow = () => {
   const handleConfirm = () => {
     setOpen(false);
   };
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
 
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
   return (
     <>
       <div className="min-h-screen bg-slate-300 flex flex-col justify-center items-center ">
         <button
-          className="bg-green-600 py-2 px-5 rounded-full hover:bg-green-500 transition-all ease-linear"
+          className="bg-green-600 py-2 px-5 rounded-full hover:bg-green-500 transition-all ease-linear border-none outline-none "
           onClick={handleClickOpen}
         >
           Open Modal
